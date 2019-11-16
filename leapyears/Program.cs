@@ -6,7 +6,7 @@ namespace leapyears
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Leap Year Checker!");
 
             var checker = new LeapYearChecker();
 
