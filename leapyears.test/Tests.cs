@@ -13,8 +13,9 @@ namespace leapyears.test
         }
 
         [Test]
-        public void Test1()
+        public void IsNormalLeapYear()
         {
+            Assert.IsTrue(LeapYearChecker.IsLeapYear(1996));
         }
     }
 }
