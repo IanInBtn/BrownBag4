@@ -2,6 +2,7 @@ using NUnit.Framework;
 
 namespace leapyears.test
 {
+    [TestFixture]
     public class Tests
     {
         private LeapYearChecker LeapYearChecker { get; set; }
