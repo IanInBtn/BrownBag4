@@ -6,8 +6,8 @@ namespace leapyears
     {
         public bool? IsLeapYear(int year)
         {
-            return IsYearUntypicalCommonYear(year) && 
-                   IsYearTypicalLeapYear(year);
+            return IsYearTypicalLeapYear(year) && 
+                   IsYearUntypicalCommonYear(year);
         }
 
         private static bool IsYearTypicalLeapYear(int year)
@@ -17,12 +17,18 @@ namespace leapyears
 
         private static bool IsYearUntypicalCommonYear(int year)
         {
-            if (year % 100 == 0 && year % 400 != 0)
-            {
-                return false;
-            }
+            return !IsTypicalCentury(year) || 
+                   IsYearUntypicalCentury(year);
+        }
 
-            return true;
+        private static bool IsYearUntypicalCentury(int year)
+        {
+            return year % 400 == 0;
+        }
+
+        private static bool IsTypicalCentury(int year)
+        {
+            return year % 100 == 0;
         }
     }
 }
