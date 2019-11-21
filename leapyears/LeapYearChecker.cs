@@ -11,7 +11,7 @@
         private static bool IsExceptionToLeapYear(int year)
         {
             return IsCenturyYear(year) && 
-                   !IsExceptionToCenturyLeapYears(year);
+                   !IsExceptionalCenturyYear(year);
         }
 
         private static bool IsTypicalLeapYear(int year)
@@ -24,7 +24,7 @@
             return year % 100 == 0;
         }
 
-        private static bool IsExceptionToCenturyLeapYears(int year)
+        private static bool IsExceptionalCenturyYear(int year)
         {
             return year % 400 == 0;
         }
