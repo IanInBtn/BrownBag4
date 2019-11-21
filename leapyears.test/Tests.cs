@@ -20,21 +20,21 @@ namespace leapyears.test
         }
 
         [Test]
-        public void IsUntypicalLeapYear()
-        {
-            Assert.IsTrue(LeapYearChecker.IsLeapYear(2000));
-        }
-
-        [Test]
-        public void IsCommonYear()
+        public void IsRegularYear()
         {
             Assert.IsFalse(LeapYearChecker.IsLeapYear(2001));
         }
 
         [Test]
-        public void IsUnTypicalCommonYear()
+        public void IsUntypicalRegularYear()
         {
             Assert.IsFalse(LeapYearChecker.IsLeapYear(1900));
+        }
+
+        [Test]
+        public void IsUntypicalLeapYear()
+        {
+            Assert.IsTrue(LeapYearChecker.IsLeapYear(2000));
         }
     }
 }

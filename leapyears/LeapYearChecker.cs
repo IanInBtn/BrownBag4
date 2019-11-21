@@ -1,28 +1,32 @@
-﻿using System;
-
-namespace leapyears
+﻿namespace leapyears
 {
     public class LeapYearChecker
     {
         public bool? IsLeapYear(int year)
         {
-            return IsYearUntypicalCommonYear(year) && 
-                   IsYearTypicalLeapYear(year);
+            return IsTypicalLeapYear(year) &&
+                   !IsExceptionToLeapYear(year);
         }
 
-        private static bool IsYearTypicalLeapYear(int year)
+        private static bool IsExceptionToLeapYear(int year)
+        {
+            return IsCenturyYear(year) && 
+                   !IsExceptionToCenturyLeapYears(year);
+        }
+
+        private static bool IsTypicalLeapYear(int year)
         {
             return year % 4 == 0;
         }
 
-        private static bool IsYearUntypicalCommonYear(int year)
+        private static bool IsCenturyYear(int year)
         {
-            if (year % 100 == 0 && year % 400 != 0)
-            {
-                return false;
-            }
+            return year % 100 == 0;
+        }
 
-            return true;
+        private static bool IsExceptionToCenturyLeapYears(int year)
+        {
+            return year % 400 == 0;
         }
     }
 }
