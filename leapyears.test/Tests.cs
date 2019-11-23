@@ -13,28 +13,40 @@ namespace leapyears.test
             LeapYearChecker = new LeapYearChecker();
         }
 
-        [Test]
-        public void IsNormalLeapYear()
+        [TestCase(1200)]
+        [TestCase(1996)]
+        [TestCase(2000)]
+        [TestCase(2004)]
+        public void IsNormalLeapYear(int year)
         {
-            Assert.IsTrue(LeapYearChecker.IsLeapYear(1996));
+            Assert.IsTrue(LeapYearChecker.IsLeapYear(year));
         }
 
-        [Test]
-        public void IsRegularYear()
+        [TestCase(1)]
+        [TestCase(1000)]
+        [TestCase(1998)]
+        [TestCase(2001)]
+        public void IsRegularYear(int year)
         {
-            Assert.IsFalse(LeapYearChecker.IsLeapYear(2001));
+            Assert.IsFalse(LeapYearChecker.IsLeapYear(year));
         }
 
-        [Test]
-        public void IsUntypicalRegularYear()
+        [TestCase(1700)]
+        [TestCase(1900)]
+        [TestCase(2100)]
+        [TestCase(3000)]
+        public void IsUntypicalRegularYear(int year)
         {
-            Assert.IsFalse(LeapYearChecker.IsLeapYear(1900));
+            Assert.IsFalse(LeapYearChecker.IsLeapYear(year));
         }
 
-        [Test]
-        public void IsUntypicalLeapYear()
+        [TestCase(0)]
+        [TestCase(800)]
+        [TestCase(1600)]
+        [TestCase(2000)]
+        public void IsUntypicalLeapYear(int year)
         {
-            Assert.IsTrue(LeapYearChecker.IsLeapYear(2000));
+            Assert.IsTrue(LeapYearChecker.IsLeapYear(year));
         }
     }
 }
