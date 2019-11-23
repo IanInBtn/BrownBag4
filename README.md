@@ -9,6 +9,11 @@ The "bowlinggame" and "tictactoe" projects are for the Hands-On Katas in Part-2.
 There are starter branches to do any Kata for yourself, as well as branches for the completed Katas.
 
 
+### The Leap Year rules
+
+A leap year is divisible by 4, but is not otherwise divisible by 100, unless it is also divisible by 400.
+
+
 ### The TicTacToe rules
 
 This is just a 3x3 game of noughts and crosses. 
