@@ -1,8 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>TDD.TicTacToe</AssemblyName>
+    <RootNamespace>TDD.TicTacToe</RootNamespace>
   </PropertyGroup>
 
 </Project>

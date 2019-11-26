@@ -1,12 +1,16 @@
 using NUnit.Framework;
 
-namespace tictactoe.test
+namespace TDD.TicTacToe.Test
 {
     public class Tests
     {
+        private IGame _game;
+
         [SetUp]
         public void Setup()
         {
+            var board = new Board();
+            _game = new Game(board);
         }
     }
 }
