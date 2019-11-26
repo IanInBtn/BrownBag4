@@ -1,12 +1,15 @@
 using NUnit.Framework;
 
-namespace bowlinggame.test
+namespace TDD.BowlingGame.Test
 {
     public class Tests
     {
+        private BowlingGame BowlingGame { get; set; }
+
         [SetUp]
         public void Setup()
         {
+            BowlingGame = new BowlingGame();
         }
     }
 }
