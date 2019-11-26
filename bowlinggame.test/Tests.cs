@@ -11,5 +11,11 @@ namespace TDD.BowlingGame.Test
         {
             BowlingGame = new BowlingGame();
         }
+
+        [Test]
+        public void GutterGame()
+        {
+            Assert.IsTrue(BowlingGame.Score == 0);
+        }
     }
 }
