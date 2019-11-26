@@ -6,14 +6,7 @@ The "leapyears" and "leapyears.test" projects contain the code for "Guided Kata"
 
 The "bowlinggame" and "tictactoe" projects are for the Hands-On Katas in Part-2.
 
-There are starter branches to do any Kata for yourself, as well as branches for the completed Katas.
-
-
-### The TicTacToe rules
-
-This is just a 3x3 game of noughts and crosses. 
-
-Players just take turns to complete a line of 3 "X"s or "O"s.
+There are starter branches to do any Kata for yourself, as well as a branch for the completed LeapYear Katas.
 
 
 ### The Bowling Game rules
